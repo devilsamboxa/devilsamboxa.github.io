@@ -1,0 +1,125 @@
+/* Body with animated magenta-to-red gradient background */
+body {
+  margin: 0;
+  font-family: sans-serif;
+  color: white;
+  background: linear-gradient(45deg, #ff00ff, #ff0000);
+  background-size: 400% 400%;
+  animation: gradientShift 10s ease infinite;
+  transition: background 1s ease, color 0.4s ease;
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Navbar */
+nav.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  background: #000000dd; /* dark solid with hex alpha */
+  backdrop-filter: blur(8px);
+  transition: background 0.4s ease;
+}
+
+.nav-left {
+  font-weight: bold;
+  color: white;
+  font-size: 1.2em;
+  transition: color 0.4s ease;
+}
+
+.nav-center {
+  display: flex;
+  gap: 15px;
+}
+
+.nav-center a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.4s ease;
+}
+
+button#toggle-theme {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 5px;
+  background-color: #ffffff33; /* white with hex alpha */
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+/* Sections with smooth transition */
+section {
+  padding: 2rem;
+  margin: 2rem auto;
+  max-width: 900px;
+  border-radius: 12px;
+  background-color: transparent; /* fully transparent */
+  color: inherit;
+  transition: background-color 0.6s ease, color 0.6s ease;
+}
+
+/* Card grid */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+/* Cards */
+.card {
+  background: #ffffffcc; /* white with hex alpha */
+  color: #222222;
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px #00000033; /* black with hex alpha */
+  text-align: center;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.6rem;
+  transition: transform 0.2s ease, background 0.3s ease, color 0.3s ease;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  background: #cc0000; /* dark red */
+  color: white;
+}
+
+.card:hover span {
+  color: white;
+}
+
+.card img {
+  width: 40px;
+  height: 40px;
+}
+
+.card span {
+  font-weight: 600;
+}
+
+/* Section headings */
+#socials h1 {
+  text-align: center;
+  font-weight: 700;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
